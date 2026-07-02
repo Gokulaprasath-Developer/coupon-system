@@ -50,4 +50,4 @@ A Spring Boot REST API for validating and applying coupons.
 
 ## Author
 
-Gokulaprasath
+Gokulaprasath N
