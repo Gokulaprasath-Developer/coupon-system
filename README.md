@@ -1,8 +1,9 @@
 # Coupon System
 
+## Overview
 A Spring Boot REST API for validating and applying coupons.
 
-## Technologies Used
+## Technologies
 - Java 17
 - Spring Boot
 - Spring Data JPA
@@ -11,20 +12,42 @@ A Spring Boot REST API for validating and applying coupons.
 - Postman
 
 ## Features
-- Validate Coupon
-- Apply Coupon
-- Prevent Duplicate Coupon Usage
-- REST API
+- Validate coupon
+- Apply coupon
+- Prevent duplicate coupon usage
+- Transaction recording
 
 ## API Endpoints
 
-POST /validate-coupon
+### POST /validate-coupon
 
-POST /apply-coupon
+```json
+{
+  "userId": 1,
+  "couponCode": "FREE100",
+  "amount": 1000
+}
+```
 
-## How to Run
+### POST /apply-coupon
 
-1. Clone the repository
-2. Configure MySQL
-3. Run the project
-4. Test APIs using Postman
+```json
+{
+  "userId": 1,
+  "couponCode": "FREE100",
+  "amount": 1000
+}
+```
+
+## Business Logic
+
+- Validate coupon
+- Check expiry
+- Check duplicate usage
+- Calculate discount
+- Save transaction
+- Return response
+
+## Author
+
+Gokulaprasath
